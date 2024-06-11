@@ -28,7 +28,7 @@ import { IMainMenu } from '@jupyterlab/mainmenu';
 
 import { RankedMenu } from '@jupyterlab/ui-components';
 
-import { IFileBrowserFactory, IDefaultFileBrowser } from '@jupyterlab/filebrowser';
+import { IDefaultFileBrowser } from '@jupyterlab/filebrowser';
 
 import { ILauncher } from '@jupyterlab/launcher';
 
@@ -67,7 +67,7 @@ export const IDrawioTracker = new Token<IDrawioTracker>('drawio/tracki');
 const extension: JupyterFrontEndPlugin<IDrawioTracker> = {
   id: '@jupyterlab/drawio-extension:plugin',
   autoStart: true,
-  requires: [IFileBrowserFactory, ILayoutRestorer, IMainMenu, ICommandPalette],
+  requires: [IDefaultFileBrowser, ILayoutRestorer, IMainMenu, ICommandPalette],
   optional: [ILauncher],
   provides: IDrawioTracker,
   activate
@@ -82,7 +82,6 @@ namespace CommandIDs {
 
 function activate(
   app: JupyterFrontEnd,
-  // browserFactory: IFileBrowserFactory,
   defaultBrowser :IDefaultFileBrowser,
   restorer: ILayoutRestorer,
   menu: IMainMenu,
@@ -90,7 +89,7 @@ function activate(
   launcher: ILauncher | null
 ): IDrawioTracker {
   const { commands } = app;
-
+  console.log('initialise drawio')
   const namespace = 'drawio';
   const tracker = new WidgetTracker<DrawIODocumentWidget>({ namespace });
 
