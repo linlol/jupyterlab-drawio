@@ -24,7 +24,7 @@
   "style": "style/index.css",
   "repository": {
     "type": "git",
-    "url": "https://github.com/wolfv/jupyterlab-drawio.git"
+    "url": "https://github.com/QuantStack/jupyterlab-drawio.git"
   },
   "scripts": {
     "build": "jlpm build:lib && jlpm build:labextension:dev",
