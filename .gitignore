@@ -10,7 +10,9 @@ node_modules/
 jupyterlab_drawio/labextension
 # Version file is handled by hatchling
 jupyterlab_drawio/_version.py
-
+# It is called jupyterlab-drawio long ago
+jupyterlab-drawio/labextension
+jupyterlab-drawio/_version.py
 # Created by https://www.gitignore.io/api/python
 # Edit at https://www.gitignore.io/?templates=python
 

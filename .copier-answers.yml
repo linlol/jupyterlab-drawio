@@ -8,7 +8,6 @@ has_settings: true
 kind: frontend
 labextension_name: jupyterlab-drawio
 project_short_description: A JupyterLab extension for embedding drawio / mxgraph.
-python_name: jupyterlab_drawio
+python_name: jupyterlab-drawio
 repository: https://github.com/wolfv/jupyterlab-drawio.git
 test: false
-
