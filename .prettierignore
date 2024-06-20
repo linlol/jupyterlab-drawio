@@ -4,4 +4,5 @@ node_modules
 **/package.json
 !/package.json
 jupyterlab_drawio
-src/drawio/resources
+# looks like lot of pre-built asset here, literally shall not prettier this
+src/drawio

@@ -82,14 +82,14 @@ namespace CommandIDs {
 
 function activate(
   app: JupyterFrontEnd,
-  defaultBrowser :IDefaultFileBrowser,
+  defaultBrowser: IDefaultFileBrowser,
   restorer: ILayoutRestorer,
   menu: IMainMenu,
   palette: ICommandPalette,
   launcher: ILauncher | null
 ): IDrawioTracker {
   const { commands } = app;
-  console.log('initialise drawio')
+  console.log('initialise drawio');
   const namespace = 'drawio';
   const tracker = new WidgetTracker<DrawIODocumentWidget>({ namespace });
 
@@ -229,8 +229,8 @@ function addMenus(
     tracker.currentWidget === app.shell.currentWidget;
 
   // Edit MENU
-  menu.editMenu.undoers.undo.add({id: CommandIDs.undo, isEnabled});
-  menu.editMenu.undoers.undo.add({id: CommandIDs.redo, isEnabled});
+  menu.editMenu.undoers.undo.add({ id: CommandIDs.undo, isEnabled });
+  menu.editMenu.undoers.undo.add({ id: CommandIDs.redo, isEnabled });
 
   const editMenu = new RankedMenu({ commands });
   editMenu.rootMenu.title.label = 'Edit';

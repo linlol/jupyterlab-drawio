@@ -19,13 +19,13 @@
     "skipLibCheck": true,
     "strictNullChecks": false,
     "target": "es2018",
-    "types": [],
+    "types": []
   },
   "include": ["src/**/*"],
   "exclude": [
     "node_modules",
     "./node_modules",
     "./node_modules/*",
-    "./node_modules/@types/node/index.d.ts",
+    "./node_modules/@types/node/index.d.ts"
   ]
 }
